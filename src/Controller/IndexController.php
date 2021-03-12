@@ -22,12 +22,13 @@ class IndexController extends AbstractController
     {
         $form = $this->createForm(IndexForm::class);
 
+        $form->handleRequest($request);
+
         if ($form->isSubmitted()) {
             //make something
-        }
-        else {
+        } else {
             if ($request->getMethod() === "POST") {
-                dd('error, form should be submitted');
+                dd('error, method should be PATCH and form should be submitted');
             }
         }
 
