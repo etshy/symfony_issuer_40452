@@ -26,6 +26,7 @@ class IndexController extends AbstractController
 
         if ($form->isSubmitted()) {
             //make something
+            dd('form submitted', $request->getMethod());
         } else {
             if ($request->getMethod() === "POST") {
                 dd('error, method should be PATCH and form should be submitted');
